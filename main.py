@@ -11,7 +11,7 @@ def process_tweet(tweet):
     return " ".join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])", " ", tweet.lower()).split())
 
 
-tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
+tfidf = pickle.load(open('/vectorizer.pkl', 'rb'))
 model = pickle.load(open('model (2).pkl', 'rb'))
 
 st.title("hate speech detection")
